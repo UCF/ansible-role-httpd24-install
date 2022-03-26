@@ -1,0 +1,25 @@
+---
+# tasks file for httpd24-install
+
+- name: install lsb support if needed
+  include_role:
+    name: ucf.ansible_role_lsb_core
+  when:
+    - ansible_lsb.id is undefined
+    - ansible_lsb.major_release undefined
+
+- name: check if required repo is installed
+  shell: 'yum repolist | grep {{ item }}'
+  args:
+    warn: no
+  check_mode: no
+  changed_when: no
+  with_items:
+    - '{{ httpd24_repos[ansible_lsb.id][ansible_lsb.major_release].split(",") }}'
+
+- name: Install Required Packages for httpd24
+  yum:
+    name: "{{ httpd24_pkgs }}"
+    state: installed
+    disablerepo: '*'
+    enablerepo: "{{ httpd24_repos[ansible_lsb.id][ansible_lsb.major_release] }}"

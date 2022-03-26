@@ -1,0 +1,15 @@
+---
+# defaults file for httpd24-install
+
+httpd24_repos:
+  RedHatEnterpriseServer:
+    '6': rhel-6-server-rpms
+    '7': rhel-7-server-rpms
+  CentOS:
+    '6': base
+    '7': base,updates
+  Amazon:
+    '2': amzn2-core
+
+httpd24_pkgs:
+  - httpd

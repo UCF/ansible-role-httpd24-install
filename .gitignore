@@ -1,0 +1,71 @@
+# ansible repo #
+
+# ---- Mac OS X ---- #
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Vim
+*.swp
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# ---- Windows ---- #
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# Ignore all retry files for ansible
+ *.retry
+
+# ignore .vscode/ settings
+.vscode/
+
+# ignore personal files.
+*_ignore.yml
+
+# ignore direnv environmental settings file
+.envrc
+
+# ignore Pipfile.lock because we run multi-platform compiled python versions
+Pipfile.lock
+
+# ignore .rpm package
+*.rpm
+
+# ignore blocked IP file for varnish.
+blocked_ip.vcl
