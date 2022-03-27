@@ -1,5 +1,5 @@
 ---
-# defaults file for httpd24-install
+# defaults file for ucf.ansible_role_httpd24_install
 
 httpd24_repos:
   RedHatEnterpriseServer:

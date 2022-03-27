@@ -2,4 +2,4 @@
 - hosts: localhost
   remote_user: root
   roles:
-    - httpd24-install
+    - ucf.ansible_role_httpd24_install

@@ -1,5 +1,5 @@
 ---
-# tasks file for httpd24-install
+# tasks file for ucf.ansible_role_httpd24_install
 
 - name: install lsb support if needed
   include_role:
